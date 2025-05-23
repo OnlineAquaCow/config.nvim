@@ -1,12 +1,29 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Open Netrw to current filepath
+vim.keymap.set('n', '<leader>pv', ':Oil<CR>', { desc = '[p]roject [v]iew files (netrw)' })
+
+-- Close current buffer
+vim.keymap.set('n', '<leader>ww', ':bdelete<CR>', { desc = 'Delete current Buffer ' })
+
+-- Change colorscheme
+vim.keymap.set('n', '<leader>zc', ':Telescope colorscheme<CR>', { desc = '[C]olorschemes' })
+
+-- Go to between previous buffer
+vim.keymap.set('n', '<leader>q', '<C-^>', { desc = '[Q]uick alternate between buffers' })
+
+-- Center buffer on scroll up/down half page
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', '<leader>h', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>oo', vim.diagnostic.setloclist, { desc = '[O]pen diagnostic quickfix list' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
