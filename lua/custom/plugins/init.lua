@@ -6,4 +6,6 @@ return {
   require 'custom.plugins.colorschemes',
 
   require 'custom.plugins.oil',
+
+  require 'custom.plugins.laravel',
 }

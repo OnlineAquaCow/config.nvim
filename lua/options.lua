@@ -1,4 +1,3 @@
--- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
@@ -72,8 +71,8 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 -- set the default tab length
-vim.o.shiftwidth = 4
-vim.o.tabstop = 4
+vim.o.shiftwidth = 2
+vim.o.tabstop = 2
 
 -- replace tabs with spaces
 vim.o.expandtab = true
