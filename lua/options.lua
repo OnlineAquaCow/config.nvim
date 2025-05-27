@@ -71,8 +71,24 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 -- set the default tab length
-vim.o.shiftwidth = 2
-vim.o.tabstop = 2
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'lua', 'js', 'ts' },
+  callback = function()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+  end,
+})
+
+-- treat blade files like php files
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+  pattern = '*.blade.php',
+  callback = function()
+    vim.bo.filetype = 'php'
+  end,
+})
 
 -- replace tabs with spaces
 vim.o.expandtab = true

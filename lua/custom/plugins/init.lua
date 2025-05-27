@@ -8,4 +8,12 @@ return {
   require 'custom.plugins.oil',
 
   require 'custom.plugins.laravel',
+
+  require 'custom.plugins.ts-autotag',
+
+  require 'custom.plugins.dadbod-ui',
+
+  require 'custom.plugins.vim-blade',
+
+  require 'custom.plugins.nvim-cmp',
 }
